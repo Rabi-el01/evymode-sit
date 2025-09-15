@@ -219,26 +219,24 @@
             </div>
         </div>
     </section>
-                 <script>
-const form = document.getElementById('orderForm');
-form.addEventListener('submit', function(e){
-  e.preventDefault();
+            <section id="order" class="py-16 bg-gray-100">
+  <h2 class="text-2xl font-bold mb-4 text-center">اطلب منتجك الآن عبر WhatsApp</h2>
 
-  const formData = new FormData(form);
-  const message = `مرحباً! أريد هذا المنتج:
-- المنتج: ${formData.get('product')}
-- الاسم: ${formData.get('name')}
-- رقم الهاتف: ${formData.get('phone')}
-- العنوان: ${formData.get('address')}, ${formData.get('city')}
-- الملاحظات: ${formData.get('remark') || '-'}
-- الكمية: ${formData.get('quantity')}
+  <form id="orderForm" class="max-w-lg mx-auto space-y-4">
+    <input type="text" name="name" placeholder="اسمك" required class="w-full p-2 border rounded">
+    <input type="text" name="phone" placeholder="رقم الهاتف" required class="w-full p-2 border rounded">
+    <input type="text" name="address" placeholder="العنوان" class="w-full p-2 border rounded">
+    <input type="text" name="city" placeholder="المدينة" class="w-full p-2 border rounded">
+    <input type="text" name="product" placeholder="اسم المنتج" required class="w-full p-2 border rounded">
+    <input type="text" name="remark" placeholder="ملاحظات" class="w-full p-2 border rounded">
+    <input type="number" name="quantity" placeholder="الكمية" required class="w-full p-2 border rounded">
+ 
+    <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">اطلب عبر WhatsApp</button>
+  </form>
+</section>
+       
 
 
-  const waLink = `https://wa.me/212688815053?text=${encodeURIComponent(message)}`; // بدل الرقم برقمك
-  window.open(waLink, '_blank');
-});
-</script>
-          
     <!-- Collections -->
     <section id="collections" class="py-16 bg-light">
         <div class="container mx-auto px-4">
