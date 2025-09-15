@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvyMode - متجر أزياء أنيق</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F472B6',
+                        secondary: '#F9A8D4',
+                        accent: '#EC4899',
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .hero-pattern {
+            background-image: url('http://static.photos/minimal/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">EvyMode</a>
+            <nav class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#" class="hover:text-primary transition">الرئيسية</a>
+                <a href="#products" class="hover:text-primary transition">المجموعات</a>
+                <a href="#new-arrivals" class="hover:text-primary transition">وصل حديثاً</a>
+                <a href="#about" class="hover:text-primary transition">عنّا</a>
+                <a href="#contact" class="hover:text-primary transition">اتصل بنا</a>
+            </nav>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+                <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition flex items-center">
+                    <i data-feather="shopping-bag" class="ml-2"></i>
+                    <span>الطلبات</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern bg-blend-overlay bg-primary bg-opacity-80 text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col items-start justify-center h-full min-h-[60vh]" data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Elevate Your Everyday Style</h1>
+            <p class="text-xl mb-8 max-w-lg">اكتشف أحدث صيحات الموضة مع EvyMode. جودة عالية، راحة لا مثيل لها.</p>
+            <div class="flex space-x-4 space-x-reverse">
+                <a href="#products" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">تسوق الآن</a>
+                <a href="#collections" class="border-2 border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition">استكشف المجموعات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا المميزة</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/fashion/640x360/1" alt="Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">فستان أنيق</h3>
+                        <p class="text-gray-600 mb-3">متوفر بمقاسات S-XXL</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">199 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20فستان%20أنيق%20-%20المقاس:%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/fashion/640x360/2" alt="Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">بلوزة مطرزة</h3>
+                        <p class="text-gray-600 mb-3">متوفر بمقاسات S-XL</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">149 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20بلوزة%20مطرزة%20-%20المقاس:%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/fashion/640x360/3" alt="Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">بنطلون جينز</h3>
+                        <p class="text-gray-600 mb-3">متوفر بمقاسات 28-38</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">229 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20بنطلون%20جينز%20-%20المقاس:%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+                    <img src="http://static.photos/fashion/640x360/4" alt="Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">حقيبة يد</h3>
+                        <p class="text-gray-600 mb-3">متوفرة بعدة ألوان</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">179 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20حقيبة%20يد%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section id="collections" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">مجموعاتنا</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Collection 1 -->
+                <div class="relative rounded-lg overflow-hidden h-64 group" data-aos="fade-right">
+                    <img src="http://static.photos/fashion/640x360/5" alt="Collection" class="w-full h-full object-cover transition group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-2xl font-bold mb-2">فساتين</h3>
+                            <a href="#" class="inline-block border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-primary transition">استكشف</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection 2 -->
+                <div class="relative rounded-lg overflow-hidden h-64 group" data-aos="fade-left">
+                    <img src="http://static.photos/fashion/640x360/6" alt="Collection" class="w-full h-full object-cover transition group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-2xl font-bold mb-2">ملابس علوية</h3>
+                            <a href="#" class="inline-block border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-primary transition">استكشف</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="new-arrivals" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">وصل حديثاً</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- New Product 1 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/7" alt="New Product" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-accent text-white text-xs px-2 py-1 rounded-full">جديد</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">سترة كتان</h3>
+                        <p class="text-gray-600 mb-3">متوفر بمقاسات S-XXL</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">249 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20سترة%20كتان%20-%20المقاس:%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- New Product 2 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/8" alt="New Product" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-accent text-white text-xs px-2 py-1 rounded-full">جديد</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">تنورة مطبوعة</h3>
+                        <p class="text-gray-600 mb-3">متوفر بمقاسات XS-L</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">179 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20تنورة%20مطبوعة%20-%20المقاس:%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- New Product 3 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/9" alt="New Product" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-accent text-white text-xs px-2 py-1 rounded-full">جديد</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">أكسسوارات شعر</h3>
+                        <p class="text-gray-600 mb-3">متوفرة بعدة ألوان</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary">99 درهم</span>
+                            <a href="https://wa.me/212600000000?text=مرحباً%20EvyMode!%20أريد%20هذا%20المنتج:%20أكسسوارات%20شعر%20-%20اللون:%20-%20الكمية:%20-%20الاسم:%20-%20العنوان:%20-%20الهاتف:" 
+                               class="bg-primary text-white px-3 py-2 rounded-full text-sm hover:bg-accent transition flex items-center">
+                               <i data-feather="message-circle" class="ml-1 w-4 h-4"></i>
+                               اطلب عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/fashion/640x360/10" alt="About EvyMode" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2 md:pr-8" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-6">عن EvyMode</h2>
+                    <p class="text-gray-700 mb-4">
+                        EvyMode هي علامة تجارية للموضة تأسست عام 2023 بهدف تقديم أزياء عالية الجودة مع التركيز على الراحة والأناقة اليومية.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        نؤمن بأن الموضة يجب أن تكون في متناول الجميع، مع الحفاظ على معايير عالية في التصميم والجودة.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse mt-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex-1 text-center">
+                            <i data-feather="check-circle" class="text-primary w-8 h-8 mx-auto mb-2"></i>
+                            <h4 class="font-bold mb-1">جودة عالية</h4>
+                            <p class="text-sm text-gray-600">منتجاتنا مصنوعة من أفضل الخامات</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex-1 text-center">
+                            <i data-feather="truck" class="text-primary w-8 h-8 mx-auto mb-2"></i>
+                            <h4 class="font-bold mb-1">توصيل سريع</h4>
+                            <p class="text-sm text-gray-600">توصيل في جميع أنحاء المغرب</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA -->
+    <section class="py-12 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">هل لديك استفسار؟</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                فريق EvyMode متاح لمساعدتك عبر WhatsApp على مدار الساعة
+            </p>
+            <a href="https://wa.me/212600000000" 
+               class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition inline-flex items-center" 
+               data-aos="fade-up" 
+               data-aos-delay="200">
+               <i data-feather="message-circle" class="ml-2 w-5 h-5"></i>
+               تواصل معنا عبر WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">اتصل بنا</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <div class="bg-light p-8 rounded-lg shadow-sm h-full">
+                        <h3 class="text-xl font-bold mb-4">معلومات التواصل</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium">العنوان</h4>
+                                    <p class="text-gray-600">شارع محمد السادس، الدار البيضاء، المغرب</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium">البريد الإلكتروني</h4>
+                                    <p class="text-gray-600">contact@evymode.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium">الهاتف</h4>
+                                    <p class="text-gray-600">+212 600 000 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">تابعنا على</h4>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <a href="#" class="bg-white p-3 rounded-full shadow-sm hover:bg-primary hover:text-white transition">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="#" class="bg-white p-3 rounded-full shadow-sm hover:bg-primary hover:text-white transition">
+                                    <i data-feather="facebook"></i>
+                                </a>
+                                <a href="#" class="bg-white p-3 rounded-full shadow-sm hover:bg-primary hover:text-white transition">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
+                    <form class="bg-light p-8 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">الموضوع</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-accent transition">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EvyMode</h3>
+                    <p class="text-gray-400">علامة تجارية للموضة تقدم أزياء عالية الجودة مع التركيز على الراحة والأناقة اليومية.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">المجموعات</a></li>
+                        <li><a href="#new-arrivals" class="text-gray-400 hover:text-white transition">وصل حديثاً</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">عنّا</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">المساعدة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">شروط الاستخدام</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">سياسة الإرجاع</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">اشترك في نشرتنا البريدية</h4>
+                    <p class="text-gray-400 mb-4">احصل على آخر التحديثات والعروض الخاصة.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 rounded-r-lg w-full focus:outline-none text-dark">
+                        <button type="submit" class="bg-primary px-4 py-2 rounded-l-lg hover:bg-accent transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 EvyMode. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/212600000000" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50">
+        <i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <script>AOS.init();</script>
+    <script>feather.replace();</script>
+</body>
+</html>
