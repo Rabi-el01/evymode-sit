@@ -219,7 +219,26 @@
             </div>
         </div>
     </section>
-                
+                 <script>
+const form = document.getElementById('orderForm');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const message = `مرحباً! أريد هذا المنتج:
+- المنتج: ${formData.get('product')}
+- الاسم: ${formData.get('name')}
+- رقم الهاتف: ${formData.get('phone')}
+- العنوان: ${formData.get('address')}, ${formData.get('city')}
+- الملاحظات: ${formData.get('remark') || '-'}
+- الكمية: ${formData.get('quantity')}
+
+
+  const waLink = `https://wa.me/212688815053?text=${encodeURIComponent(message)}`; // بدل الرقم برقمك
+  window.open(waLink, '_blank');
+});
+</script>
+          
     <!-- Collections -->
     <section id="collections" class="py-16 bg-light">
         <div class="container mx-auto px-4">
