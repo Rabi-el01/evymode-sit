@@ -81,21 +81,23 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا المميزة</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-               <!-- Product 1 with Image Slider -->
+              <!-- Product 1 -->
 <div class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
   
   <!-- Image Carousel -->
   <div class="relative">
-    <img src="https://i.imgur.com/R2hcaKB.jpeg" alt="Product" class="w-full h-64 object-cover product-image active">
-    <img src="https://i.imgur.com/abcd123.jpeg" alt="Product" class="w-full h-64 object-cover product-image hidden">
-    <img src="https://i.imgur.com/efgh456.jpeg" alt="Product" class="w-full h-64 object-cover product-image hidden">
+    <div class="product-images">
+      <img src="https://i.imgur.com/R2hcaKB.jpeg" alt="Product" class="w-full h-64 object-cover active">
+      <img src="https://i.imgur.com/tXj4Z1C.jpeg" alt="Product" class="w-full h-64 object-cover hidden">
+      <img src="https://i.imgur.com/9Z3b8F1.jpeg" alt="Product" class="w-full h-64 object-cover hidden">
+    </div>
 
-    <!-- Controls -->
-    <button onclick="prevImage(this)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1">‹</button>
-    <button onclick="nextImage(this)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1">›</button>
+    <!-- Buttons -->
+    <button class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">‹</button>
+    <button class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">›</button>
   </div>
 
-  <!-- Product Info -->
+  <!-- Info -->
   <div class="p-4">
     <h3 class="font-bold text-lg mb-2">فستان أنيق</h3>
     <p class="text-gray-600 mb-3">متوفر بمقاسات L-XXL</p>
@@ -110,26 +112,34 @@
   </div>
 </div>
 
-<!-- JavaScript for slider -->
 <script>
-function nextImage(button) {
-  const container = button.closest('.relative');
-  const images = container.querySelectorAll('.product-image');
-  let activeIndex = Array.from(images).findIndex(img => !img.classList.contains('hidden'));
-  images[activeIndex].classList.add('hidden');
-  let nextIndex = (activeIndex + 1) % images.length;
-  images[nextIndex].classList.remove('hidden');
-}
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".product-images").forEach(function(gallery){
+    let slides = gallery.querySelectorAll("img");
+    let index = 0;
+    let container = gallery.parentElement;
 
-function prevImage(button) {
-  const container = button.closest('.relative');
-  const images = container.querySelectorAll('.product-image');
-  let activeIndex = Array.from(images).findIndex(img => !img.classList.contains('hidden'));
-  images[activeIndex].classList.add('hidden');
-  let prevIndex = (activeIndex - 1 + images.length) % images.length;
-  images[prevIndex].classList.remove('hidden');
-}
+    function showSlide(i){
+      slides.forEach((img, idx) => {
+        img.classList.toggle("hidden", idx !== i);
+        img.classList.toggle("active", idx === i);
+      });
+    }
+
+    container.querySelector(".prev").addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+    container.querySelector(".next").addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    showSlide(index);
+  });
+});
 </script>
+
 
                 
                 <!-- Product 2 -->
